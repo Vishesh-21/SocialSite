@@ -274,3 +274,89 @@ main .container {
 .ntyPopUp small {
   display: block;
 }
+
+/* ================= styling of the middle section of main ===================  */
+
+.middle .stories {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  height: 11rem;
+}
+
+.stories .story {
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+  font-size: 0.75rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.stories .story:nth-child(1) {
+  background: url("./assets/profile3.webp") no-repeat center center/cover;
+}
+.stories .story:nth-child(2) {
+  background: url("./assets/profile5.jpeg") no-repeat center center/cover;
+}
+.stories .story:nth-child(3) {
+  background: url("./assets/profile11.jpeg") no-repeat center center/cover;
+}
+.stories .story:nth-child(4) {
+  background: url("./assets/profile4.webp") no-repeat center center/cover;
+}
+.stories .story:nth-child(5) {
+  background: url("./assets/profile7.webp") no-repeat center center/cover;
+}
+
+.stories .story::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5rem;
+  position: absolute;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+  bottom: 0;
+  /* z-index: -1; */
+}
+
+.stories .story .name {
+  z-index: 2;
+}
+
+.stories .story .profilePic {
+  width: 2rem;
+  height: 2rem;
+  align-self: start;
+  border: 3px solid var(--color-primary);
+}
+
+.middle .create {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  background-color: var(--color-white);
+  padding: 0.4rem var(--card-padding);
+  border-radius: var(--border-radius);
+}
+
+.middle .create .profilePic {
+  width: 2rem;
+}
+
+.middle .create input[type="text"] {
+  justify-self: start;
+  width: 100%;
+  padding-left: 1rem;
+  background-color: transparent;
+  color: var(--color-dark);
+  margin-right: 1rem;
+}
+
