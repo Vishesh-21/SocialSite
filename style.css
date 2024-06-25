@@ -428,3 +428,112 @@ main .container {
 .likedBy p {
   margin-left: 0.5rem;
 }
+
+/* ====================== styling for the right section of socialSite =========================  */
+
+.container .right {
+  height: max-content;
+  position: sticky;
+  top: var(--sticky-top-right);
+  bottom: 0;
+}
+
+.right .messages {
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}
+
+.right .messages .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right .messages i {
+  font-size: 1.2rem;
+}
+
+.right .messages .searchBar {
+  display: flex;
+  margin-bottom: 0.8rem;
+  background: var(--color-light);
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+}
+
+.messages .searchBar input {
+  background-color: transparent;
+  width: 100%;
+  margin-left: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+}
+
+.messages .searchBar input::placeholder {
+  color: var(--color-gray);
+}
+
+.messages .category {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.category h6 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 3.5px solid var(--color-light);
+  padding-bottom: 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.category .active {
+  border-color: var(--color-dark);
+}
+
+.messages .profilePic {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  overflow: visible;
+}
+
+.messages .profilePic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.messages .message {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: start;
+  cursor: pointer;
+}
+
+.messages .message:last-child {
+  margin: 0px;
+}
+
+.messages .message p {
+  font-size: 0.8rem;
+}
+
+.messages .message .profilePic .active {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: var(--color-success);
+  border: 3px solid var(--color-white);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.msgReq {
+  color: var(--color-primary);
+}
