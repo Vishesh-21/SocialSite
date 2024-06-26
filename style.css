@@ -2,14 +2,19 @@
 
 /* ============== declaring root variables ==============  */
 :root {
-  --color-white: hsl(252, 30%, 100%);
-  --color-light: hsl(252, 30%, 95%);
+  --primary-hue: 252;
+  --dark-color-lightness: 17%;
+  --light-color-lightness: 95%;
+  --white-color-lightness: 100%;
+
+  --color-white: hsl(252, 30%, var(--white-color-lightness));
+  --color-light: hsl(252, 30%, var(--light-color-lightness));
   --color-gray: hsl(252, 15%, 65%);
-  --color-primary: hsl(252, 75%, 60%);
+  --color-primary: hsl(var(--primary-hue), 75%, 60%);
   --color-secondary: hsl(252, 100%, 90%);
   --color-success: hsl(120, 95%, 65%);
   --color-danger: hsl(0, 95%, 65%);
-  --color-dark: hsl(252, 30%, 17%);
+  --color-dark: hsl(252, 30%, var(--dark-color-lightness));
   --color-black: hsl(252, 30%, 10%);
 
   --border-radius: 2rem;
@@ -149,7 +154,7 @@ main .container {
   height: max-content;
   position: sticky;
   position: -webkit-sticky;
-  top: 4rem;
+  top: 3.5rem;
   /* top: (var(--sticky-top-left)); */
 }
 
@@ -164,14 +169,14 @@ main .container {
 }
 
 .left .sidebar {
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   background-color: var(--color-white);
   border-radius: var(--card-border-radius);
 }
 
 .sidebar .menuItem {
   display: flex;
-  height: 3.8rem;
+  height: 3rem;
   align-items: center;
   cursor: pointer;
   transition: var(--transition);
@@ -594,6 +599,7 @@ main .container {
   padding: 3rem;
   border-radius: var(--card-border-radius);
   width: 50%;
+  box-shadow: 0 0 1rem var(--color-primary);
 }
 
 /* ------------ font size --------------  */
@@ -745,6 +751,9 @@ main .container {
   .left .btn {
     display: none;
   }
+  .customTheme .card {
+    width: 80vw;
+  }
 }
 
 /* ============ Media queries for small tablets and mobile phones ============ */
@@ -761,8 +770,9 @@ main .container {
     grid-column: 3/4;
     position: fixed;
     bottom: 0;
-    top: 0;
+    top: 7rem;
   }
+
   .left .ntyPopUp {
     position: absolute;
     left: -20rem;
@@ -780,5 +790,8 @@ main .container {
   }
   main .container .right {
     display: none;
+  }
+  .customTheme .card {
+    width: 92vw;
   }
 }
